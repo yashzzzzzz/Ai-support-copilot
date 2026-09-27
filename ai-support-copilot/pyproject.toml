@@ -1,0 +1,24 @@
+[project]
+name = "ai-support-copilot"
+version = "0.1.0"
+description = "A small retrieval-augmented generation (RAG) support copilot."
+authors = [{ name = "Yashitha C" }]
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.34",
+    "flask>=3.0",
+    "scikit-learn>=1.4",
+    "numpy>=1.26",
+    "click>=8.1",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+copilot = "copilot.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
